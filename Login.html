@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <input type="password" id="password" placeholder="Enter password" />
+  <button onclick="login()">Login</button>
+
+  <script>
+    function login() {
+      const password = document.getElementById("password").value;
+      const correctPassword = "1234"; // change this
+
+      if (password === correctPassword) {
+        // Store login flag in localStorage (to simulate session)
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "Home.html";
+      } else {
+        alert("Wrong password!");
+      }
+    }
+  </script>
+</body>
+</html>
